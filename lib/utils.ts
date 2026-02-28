@@ -15,7 +15,8 @@ export const toSlug = (text: string): string =>
     .toLowerCase()
     .replace(/[^\w\s-]+/g, "")
     .replace(/\s+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/^-+|-+$/g, "")
+    .replace(/-+/g, "-");
 
 const CURRENCY_FORMATTER = new Intl.NumberFormat("en-US", {
   currency: "USD",
@@ -32,7 +33,7 @@ export function formatNumber(number: number) {
 }
 
 export const round2 = (num: number) =>
-  Math.round((num + Number.EPSILON) * 100) / 100
+  Math.round((num + Number.EPSILON) * 100) / 100;
 
 export const generateId = () =>
-  Array.from({ length: 24 }, () => Math.floor(Math.random() * 10)).join('')
+  Array.from({ length: 24 }, () => Math.floor(Math.random() * 10)).join("");
