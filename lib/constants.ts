@@ -1,4 +1,9 @@
 export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "JMAMZS";
+export const SERVER_URL =
+  process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:3000";
+
+export const SENDER_EMAIL = process.env.SENDER_EMAIL || "onboarding@resend.dev";
+export const SENDER_NAME = process.env.SENDER_NAME || APP_NAME;
 export const APP_SLOGAN =
   process.env.NEXT_PUBLIC_APP_SLOGAN || "Spend much, enjoy more.";
 export const APP_DESCRIPTION =
@@ -13,44 +18,43 @@ export const APP_COPYRIGHT =
   process.env.NEXT_PUBLIC_APP_COPYRIGHT ||
   `Copyright © 2025 ${APP_NAME}. All rights reserved.`;
 
-
 export const AVAILABLE_PAYMENT_METHODS = [
   {
-    name: 'PayPal',
+    name: "PayPal",
     commission: 0,
     isDefault: true,
   },
   {
-    name: 'Stripe',
+    name: "Stripe",
     commission: 0,
     isDefault: false,
   },
   {
-    name: 'Cash On Delivery',
+    name: "Cash On Delivery",
     commission: 0,
     isDefault: false,
   },
-]
+];
 export const DEFAULT_PAYMENT_METHOD =
-  process.env.DEFAULT_PAYMENT_METHOD || 'PayPal'
+  process.env.DEFAULT_PAYMENT_METHOD || "PayPal";
 
 export const AVAILABLE_DELIVERY_DATES = [
   {
-    name: 'Tomorrow',
+    name: "Tomorrow",
     daysToDeliver: 1,
     shippingPrice: 12.9,
     freeShippingMinPrice: 0,
   },
   {
-    name: 'Next 3 Days',
+    name: "Next 3 Days",
     daysToDeliver: 3,
     shippingPrice: 6.9,
     freeShippingMinPrice: 0,
   },
   {
-    name: 'Next 5 Days',
+    name: "Next 5 Days",
     daysToDeliver: 5,
     shippingPrice: 4.9,
     freeShippingMinPrice: 35,
   },
-]
+];
