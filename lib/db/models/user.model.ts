@@ -2,7 +2,7 @@ import { IUserInput } from '@/types'
 import { Document, Model, model, models, Schema } from 'mongoose'
 
 export interface IUser extends Document, IUserInput {
-  _id: string
+  _id: any
   createdAt: Date
   updatedAt: Date
 }
